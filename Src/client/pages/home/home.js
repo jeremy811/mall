@@ -89,7 +89,10 @@ Page({
         }
       },
       fail: result => {
-        
+        wx.hideLoading()
+        wx.showToast({
+          title: '商品数据加载失败',
+        })
       }
     })
   }

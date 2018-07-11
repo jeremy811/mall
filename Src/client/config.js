@@ -22,7 +22,8 @@ var config = {
 
         // 上传图片接口
         uploadUrl: `${host}/weapp/upload`,
-        productList: `${host}/weapp/product`
+        productList: `${host}/weapp/product`,
+        productDetail: `${host}/weapp/product/`
 
     }
 };
