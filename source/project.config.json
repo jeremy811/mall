@@ -1,0 +1,37 @@
+{
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wxd6650baa24a12e56",
+	"projectname": "%E5%95%86%E5%9F%8E",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "商品详情页",
+					"pathName": "pages/detail/detail",
+					"query": ""
+				}
+			]
+		}
+	}
+}
