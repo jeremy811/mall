@@ -36,4 +36,7 @@ router.get('/product', controllers.product.list)
 router.get('/product/:id', controllers.product.detail)
 router.post('/order', validationMiddleware, controllers.order.add)
 router.get('/order', validationMiddleware, controllers.order.list)
+router.put('/trolley', validationMiddleware, controllers.trolley.add)
+
+
 module.exports = router
