@@ -76,6 +76,7 @@ Page({
       url: config.service.productList,
       success: result => {
         wx.hideLoading()
+        console.log(result)
         if(result.data.code == 0){
           this.setData({
             productList:result.data.data
@@ -84,14 +85,14 @@ Page({
         else{
           wx.hideLoading()
           wx.showToast({
-            title: '商品数据加载失败',
+            title: '系统服务异常，请稍后重拾',
           })
         }
       },
       fail: result => {
         wx.hideLoading()
         wx.showToast({
-          title: '商品数据加载失败',
+          title: '加载失败',
         })
       }
     })
