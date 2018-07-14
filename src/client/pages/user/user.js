@@ -51,12 +51,30 @@ Page({
         })
       }
     })
+/*    
+    qcloud.setLoginUrl(config.service.loginUrl)
+    qcloud.login({
+      success: result => {
+        console.log('success')
+        console.log(result)
+        console.log(result.avatarUrl)
+        this.setData({
+          userInfo:result
+        })
+      },
+      fail: result => {
+        console.log('fail')
+        console.log(result)
+      }
+    })
+*/    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+/*
     // 同步授权状态
     this.setData({
       locationAuthType: app.data.locationAuthType
@@ -68,6 +86,7 @@ Page({
         })
       }
     })
+*/    
   },
 
   /**

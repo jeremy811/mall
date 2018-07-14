@@ -1,3 +1,4 @@
+<!--pages/user/user.wxml-->
 <image class="bg" src="/images/bg.png"></image>
 <view wx:if="{{!userInfo}}">
   <view class="unlogin-card">

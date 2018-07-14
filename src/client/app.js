@@ -20,6 +20,7 @@ App({
   login({ success, error }) {
     wx.getSetting({
       success: res => {
+        console.log(res)
         if (res.authSetting['scope.userInfo'] === false) {
 
           this.data.locationAuthType = UNAUTHORIZED
@@ -31,6 +32,7 @@ App({
           })
           error && error()
         } else {
+          console.log("login success")
           this.data.locationAuthType = AUTHORIZED
           this.doQcloudLogin({ success, error })
         }
@@ -40,6 +42,7 @@ App({
 
   doQcloudLogin({ success, error }) {
     // 调用 qcloud 登陆接口
+    qcloud.setLoginUrl(config.service.loginUrl)
     qcloud.login({
       success: result => {
         if (result) {
@@ -52,7 +55,8 @@ App({
           this.getUserInfo({ success, error })
         }
       },
-      fail: () => {
+      fail: result => {
+        console.log(result)
         error && error()
       }
     })
@@ -66,6 +70,7 @@ App({
       login: true,
       success: result => {
         let data = result.data
+        console.log(data)
 
         if (!data.code) {
           let userInfo = data.data
