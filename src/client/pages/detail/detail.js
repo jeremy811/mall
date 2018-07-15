@@ -25,7 +25,8 @@ Page({
       login: true,
       method: 'POST',
       data: {
-        list: [product]
+        list: [product],
+        isInstantBuy: true
       },
       success: result => {
         wx.hideLoading()
